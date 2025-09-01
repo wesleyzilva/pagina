@@ -1,0 +1,65 @@
+<main class="home-container">
+    <nav class="options">
+        <a
+            class="option-link"
+            href="https://www.linkedin.com/in/wesleyzilva"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LinkedIn
+        </a>
+        <a
+            class="option-link"
+            href="index.html"
+        >
+            Página Atual
+        </a>
+    </nav>
+    <section class="carousel">
+        <img
+            src="assets/carrossel1.jpg"
+            width="400"
+            height="250"
+            alt="Foto do carrossel"
+        />
+        <div class="carousel-controls">
+            <button type="button">Anterior</button>
+            <button type="button">Próxima</button>
+        </div>
+    </section>
+</main>
+<style>
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .options {
+        display: flex;
+        gap: 2rem;
+    }
+    .option-link {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #0077b5;
+        border: 1px solid #0077b5;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+    .option-link:hover {
+        background: #e6f0fa;
+    }
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .carousel-controls {
+        display: flex;
+        gap: 1rem;
+    }
+</style>
