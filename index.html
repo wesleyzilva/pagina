@@ -6,76 +6,236 @@
     <title>Portfólio de Wesley Gomes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Responsivo para layout principal */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+        .about-text {
+            flex: 2;
+        }
+        .about-photo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .about-photo img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background: #0A66C2;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        .project-card {
+            background: #fafafa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #0A66C2;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #084a8c;
+        }
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .about-photo img {
+                width: 140px;
+                height: 140px;
+            }
+            .skills-list {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .container {
+                padding: 0.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 1.5rem;
+            }
+            .header-content p {
+                font-size: 1rem;
+            }
+            .about-photo img {
+                width: 100px;
+                height: 100px;
+            }
+            .btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            .phone-display {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header class="header">
         <div class="header-content">
             <h1 class="name">Wesley Gomes</h1>
-            <p class="role">Desenvolvedor de Software</p>
+            <p class="role">Coordenador de projetos de desenvolvimento com vivência agile</p>
         </div>
     </header>
 
     <main class="container">
-        <section id="about" class="section">
+        <section id="about" class="section about-section">
+            <div class="about-text">
             <h2 class="section-title">Sobre Mim</h2>
-            <p>Olá! Sou Wesley Gomes, um profissional com mais de 14 anos de experiência em TI em transição de carreira, migrando do desenvolvimento para a coordenação ágil de times de alta performance. Localizado em São Carlos, estou em busca de uma posição remota, mas me coloco à disposição para o formato de trabalho híbrido.</p>
+            <p>Olá! Sou Wesley Gomes, um profissional com mais de 14 anos de experiência em TI em transição de carreira, migrando do desenvolvimento para a coordenação ágil de times de alta performance nos últimos 4 anos. Tenho um background de arquitetura, com conhecimentos em front-end, API Rest em Nuvem, capaz de guiar times para soluções robustas e intuitivas baseado na jornada do usuário utilizando ferramentas de interação dinâmica e metodologias, ferramentas e frameworks para facilitar a vida do product owner para o alinhamento com desenvolvedores, QA´s, SRE´s e áreas de governança.</p>
             <p>Minha paixão é otimizar processos e guiar equipes na entrega de produtos de alta qualidade, mantendo o foco em tecnologias emergentes e em metodologias que impulsionam a inovação.</p>
+            </div>
+            <div class="about-photo">
+            <img src="wesley.jpg" alt="Foto de Wesley Gomes">
+            </div>
+        </section>
+        <section id="softskills" class="section">
+            <h2 class="section-title">Soft Skills</h2>
+            <ul class="skills-list">
+            <li>Comunicação Clara</li>
+            <li>Resolução de Problemas</li>
+            <li>Liderança</li>
+            <li>Adaptabilidade</li>
+            <li>Pensamento Analítico</li>
+            <li>Gerenciamento de Pessoas</li>
+            <li>Processos Ágeis</li>
+            <li>Gestão de Times Remotos</li>
+            <li>Dinâmicas Virtuais</li>
+            <li>1:1</li>
+           </ul>
         </section>
 
         <section id="skills" class="section">
             <h2 class="section-title">Hard Skills</h2>
             <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>Git & GitHub</li>
-                <li>UI/UX Design</li>
-                <li>Design Responsivo</li>
-                <li>Acessibilidade Web</li>
-                <li>Inglês - Avançado</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Git & GitHub</li>
+            <li>UI/UX Design</li>
+            <li>Design Responsivo</li>
+            <li>Acessibilidade Web</li>
+            <li>Mobile First</li>
+            <li>Media Queries</li>
+            <li>Flexbox & Grid</li>
+            <li>ITIL</li>
+            <li>Yellow Belt Lean Six Sigma</li>
             </ul>
         </section>
-
-        <section id="softskills" class="section">
-            <h2 class="section-title">Soft Skills</h2>
-            <ul class="skills-list">
-                <li>Liderança de Equipes</li>
-                <li>Comunicação Interpessoal</li>
-                <li>Pensamento Crítico e Analítico</li>
-                <li>Resolução de Problemas</li>
-                <li>Adaptabilidade e Flexibilidade</li>
-                <li>Colaboração e Trabalho em Equipe</li>
-            </ul>
-        </section>
-
         <section id="projects" class="section">
-            <h2 class="section-title">Projetos</h2>
+            <h2 class="section-title">Pilares do trabalho, Capacidade de execução & Resultados alcançados entre Jan/2023 a Ago/2025</h2>
+            <div class="result-pillars" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Documentação dinâmica</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Automação de testes</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Monitoramento</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Ambiente seguro</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Desenvolvimento de autonomia</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Desenho da arquitetura das aplicações</div>
+            </div>
             <div class="project-card">
-                <h3>Projeto 1: Nome do Projeto</h3>
-                <p>Breve descrição do projeto, as tecnologias utilizadas e o que foi aprendido. Adicione um link para o repositório no GitHub para que as pessoas possam ver o código.</p>
-                <a href="#" class="btn" target="_blank">Ver Repositório</a>
+                <h3>Projeto 1: Vulnerabilidades em parque de 110 aplicações Angular e Java.</h3>
+                <p><strong>Escopo:</strong> Redução de vulnerabilidades em aplicação em tempo record com squad de terceiros sem conhecimento no negócio e prazo e budget estipulado para terminar.</p>
+                <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="background: #e6f0fa;">
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Duração</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Equipe</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Conquistas</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Destaques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">9 meses</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">1 SRE, 3 desenvolvedores, 1 QA, 1 Arquiteto</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Redução de 1200 para 300 vulnerabilidades, zerando as críticas e altas, implantação do DevSecOps com a utilização do Veracode, Rapid 7, Automação de testes e criação e ajuste em esteira CI/CD.</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Coordenação direta no modelo ágil sem scrum master com reports executivos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="https://flexpag.com/" class="btn" target="_blank">Flexpag M&A Serasa Experian</a>
+            </div>
+            <div class="project-card">
+                <h3>Projeto 2: Implementação de Gestão de dados em M&A.</h3>
+                <p><strong>Escopo:</strong> Implantação de equipes de Analytics, Engenharia de dados & Processamento de dados separando os papeis e responsabilidades e focando em monitoramento via DataDog e construção referenciada na arquitetura de referência.</p>
+                <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="background: #e6f0fa;">
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Duração</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Equipe</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Conquistas</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Destaques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">9 meses</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">1 Product Owner, 1 DBRE, 2 analistas de dados (Analytics), 2 engenheiros de dados, 2 analistas de dados (ETL)</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Separação de papéis e responsabilidades, elevação da maturidade da equipe e ecossistema mais sustentável.</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Coordenação direta no modelo ágil sem scrum master com reports executivos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="https://flexpag.com/" class="btn" target="_blank">Flexpag M&A Serasa Experian</a>
             </div>
         </section>
-
         <section id="contact" class="section">
             <h2 class="section-title">Contato e Redes Sociais</h2>
-            <p>Sinta-se à vontade para me conectar comigo. Estou sempre aberto a novas oportunidades e colaborações.</p>
-            <a href="https://www.linkedin.com/in/wesleyzilva/" class="social-btn linkedin-btn" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.instagram.com/wesley.zilva/" class="social-btn instagram-btn" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="tel:+5516999999999" class="social-btn phone-btn">
-                <i class="fas fa-phone"></i> Telefone
-            </a>
-            </section>
+            <p>Sinta-se à vontade para me conectar comigo no LinkedIn ou Instagram. Estou sempre aberto a novas oportunidades e colaborações.</p>
+            <div style="display: flex; align-items: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                <div class="social-icons" style="display: flex; gap: 1rem;">
+                    <a href="https://www.linkedin.com/in/wesleyzilva" target="_blank" aria-label="LinkedIn" style="color: #0A66C2; font-size: 2rem;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/wesley.zilva" target="_blank" aria-label="Instagram" style="color: #E4405F; font-size: 2rem;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div>
+                    <div class="phone-display" style="font-size: 1.2rem;"></div>
+                        <i class="fas fa-phone"></i> <span>(16) 997212966</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2025 Wesley Gomes Portfólio.</p>
-    </footer>
+    <!-- Ícone do WhatsApp flutuante -->
+    <a href="https://wa.me/5516997212966" target="_blank" aria-label="Olá/Hello, Wesley"
+       style="position: fixed; bottom: 24px; right: 24px; z-index: 1000; background: #25d366; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+        <i class="fab fa-whatsapp" style="font-size: 2rem;"></i>
+    </a>
 
 </body>
 </html>
