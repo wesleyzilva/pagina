@@ -1,10 +1,15 @@
-# Plano de Evolução do Portfólio de Wesley Gomes
+# Plano de Evolução
 
 Este documento descreve a visão e a arquitetura planejada para a evolução do portfólio, transformando-o de uma página web estática para um ecossistema de aplicações completo e moderno, focado em práticas de desenvolvimento robustas e escaláveis.
 
 ## 🚀 Visão do Projeto
 
-O objetivo é refatorar o portfólio atual para uma arquitetura full-stack, aplicando conceitos de desenvolvimento modular e de microserviços. Esta transição servirá como um projeto prático para demonstrar proficiência em tecnologias e metodologias de ponta, incluindo a criação de um contador de acessos flutuante para mostrar resultados em tempo real.
+O objetivo é refatorar o portfólio atual para uma arquitetura full-stack, aplicando conceitos de desenvolvimento modular e de microserviços. Esta transição servirá como um projeto prático para demonstrar proficiência em tecnologias e metodologias de ponta, incluindo a criação de um contador de acessos flutuante para mostrar resultados em tempo real no github pessoal.
+
+Repositorio: https://github.com/wesleyzilva/pagina
+
+Produto: https://wesleyzilva.github.io/pagina/
+
 
 ---
 
