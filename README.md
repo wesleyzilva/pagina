@@ -22,61 +22,54 @@ A nova arquitetura será composta por camadas distintas que se comunicam para ga
     *   Uma API de fachada servirá como a única porta de entrada para o frontend. Ela irá orquestrar requisições, simplificar a comunicação com o backend e centralizar a segurança.
 
 3.  **API Business (Backend):**
-    *   Esta API será responsável por toda a lógica de negócio, como a gestão dos dados de projetos, habilidades e o processamento do contador de acessos.
+    *   Esta API será responsável por toda a lógica de negócio, como a gestão dos dados de projetos e habilidades.
 
 4.  **Banco de Dados (PostgreSQL):**
     *   O **PostgreSQL** será o repositório de dados, armazenando de forma persistente as informações do portfólio.
 
 ---
 
-## 📈 Funcionalidade Chave: Contador de Acessos
+## 🗺️ Plano de Sprints (Ciclo Ágil)
 
-Para demonstrar a interação ponta a ponta, a primeira funcionalidade a ser implementada será um **contador de acessos em tempo real**.
+O desenvolvimento será guiado por um ciclo de sprints, focando em entregas incrementais de valor, qualidade de código e automação.
 
-*   **Como funcionará:** Ao carregar a página, o frontend fará uma chamada à API, que incrementará o valor do contador no banco de dados e retornará o total de acessos. O frontend exibirá este valor em um componente na tela.
-
----
-
-## 🗺️ Plano de Sprints (Execução em 5 dias)
-
-O desenvolvimento inicial será dividido em 5 dias de trabalho focado.
-
-### **Sprint 1 (Dia 1): Planejamento e Configuração do Ambiente**
-- **Objetivo:** Estruturar o projeto e preparar o ambiente de desenvolvimento.
+### **Sprint 1: Fundação e Estrutura do Projeto**
+- **Objetivo:** Definir a arquitetura base e configurar o ambiente de desenvolvimento com foco em boas práticas e automação inicial.
 - **Tarefas:**
-    - [x] Detalhar o plano de sprints.
-    - [ ] Criar a estrutura de pastas do projeto (`frontend/`, `backend/`).
-    - [ ] Configurar os repositórios no Git.
-    - [ ] Inicializar um novo projeto Angular.
-    - [ ] Definir a estrutura base do projeto backend (API Facade e Business).
+    - [ ] Definir a estrutura do monorepo (`frontend`, `backend/facade`, `backend/business`).
+    - [ ] Inicializar o projeto **Angular** com linter (ESLint) e formatação (Prettier).
+    - [ ] Inicializar os projetos **backend** (ex: Spring Boot) com dependências para web, dados e segurança.
+    - [ ] Configurar o pipeline de **CI (Continuous Integration)** inicial com um job de build para validar a estrutura.
+    - [ ] Criar o primeiro componente Angular com seu **teste unitário** (Jasmine/Karma).
 
-### **Sprint 2 (Dia 2): Backend - API e Banco de Dados**
-- **Objetivo:** Construir a base da API e a persistência de dados.
+### **Sprint 2: Backend, Persistência e TDD**
+- **Objetivo:** Desenvolver a camada de API e a conexão com o banco de dados, aplicando TDD (Test-Driven Development).
 - **Tarefas:**
-    - [ ] Modelar e criar as tabelas no PostgreSQL (ex: `access_counter`).
-    - [ ] Configurar a conexão do backend com o banco de dados.
-    - [ ] Desenvolver o endpoint para o contador de acessos (`POST /visits`).
-    - [ ] Implementar a lógica para incrementar e retornar o número de visitas.
+    - [ ] Modelar o domínio inicial no **PostgreSQL** (ex: tabela `projects`).
+    - [ ] Implementar a camada de persistência (Repository) com **testes de integração** (usando H2 ou Testcontainers).
+    - [ ] Criar a primeira API na camada `Business` (ex: `GET /api/projects`) com **testes unitários** para Service e Controller.
+    - [ ] Adicionar a execução de testes do backend no pipeline de CI.
 
-### **Sprint 3 (Dia 3): Frontend - Integração do Contador**
-- **Objetivo:** Conectar o frontend com a API para exibir o contador.
+### **Sprint 3: Integração Frontend-Backend e Componentização**
+- **Objetivo:** Conectar o frontend à API e refatorar a UI estática em componentes dinâmicos e testáveis.
 - **Tarefas:**
-    - [ ] Criar um serviço em Angular (`CounterService`) para se comunicar com a API.
-    - [ ] Implementar a chamada à API no carregamento da página.
-    - [ ] Criar um componente visual para exibir o número de acessos.
-    - [ ] Estilizar o componente do contador.
+    - [ ] Criar um serviço em Angular (`ProjectService`) para consumir a API.
+    - [ ] Refatorar a seção de projetos para usar componentes dinâmicos (ex: `ProjectCardComponent`).
+    - [ ] Escrever **testes unitários** para o `ProjectService` (com `HttpClientTestingModule`) e para os componentes.
+    - [ ] Configurar o proxy de desenvolvimento do Angular para evitar problemas de CORS localmente.
 
-### **Sprint 4 (Dia 4): Refatoração e Integração Contínua**
-- **Objetivo:** Melhorar a estrutura do código e automatizar o deploy.
+### **Sprint 4: Automação de Testes E2E e Qualidade de Código**
+- **Objetivo:** Aumentar a confiança no código através de automação de testes de ponta a ponta e análise estática.
 - **Tarefas:**
-    - [ ] Refatorar o HTML estático para componentes Angular reutilizáveis (ex: `ProjectCardComponent`).
-    - [ ] Garantir que a integração Frontend <-> Backend está robusta (tratamento de erros, CORS).
-    - [ ] Configurar um pipeline de CI/CD básico (GitHub Actions) para o build do frontend.
+    - [ ] Configurar um framework de **testes E2E (End-to-End)**, como Cypress ou Playwright.
+    - [ ] Escrever o primeiro teste E2E: "visitar a página e verificar se a lista de projetos é carregada".
+    - [ ] Integrar a execução dos testes E2E no pipeline de CI.
+    - [ ] Documentar a API usando **Swagger/OpenAPI** no backend.
 
-### **Sprint 5 (Dia 5): Deploy e Finalização**
-- **Objetivo:** Publicar a primeira versão funcional e documentar o processo.
+### **Sprint 5: Deploy Contínuo e Monitoramento**
+- **Objetivo:** Automatizar o processo de deploy e preparar a aplicação para o ambiente de produção.
 - **Tarefas:**
-    - [ ] Realizar o deploy da nova versão do frontend no GitHub Pages.
-    - [ ] (Opcional) Realizar o deploy do backend em uma plataforma (ex: Heroku, Vercel).
-    - [ ] Testar a funcionalidade em produção.
-    - [ ] Atualizar o `README.md` com o status final da sprint e lições aprendidas.
+    - [ ] Criar um workflow de **CD (Continuous Deployment)** para publicar o frontend no GitHub Pages.
+    - [ ] "Dockerizar" as aplicações backend.
+    - [ ] (Opcional) Configurar o deploy do backend em uma plataforma de nuvem via pipeline de CD.
+    - [ ] Adicionar **health checks** (`/actuator/health`) nas APIs de backend.
