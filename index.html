@@ -17,6 +17,7 @@
             display: flex;
             align-items: flex-start;
             gap: 2rem;
+            flex-wrap: wrap; /* Adicionado para responsividade */
         }
         .about-text {
             flex: 2;
@@ -108,7 +109,7 @@
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
         }
-        .project-card .btn {    background: #27ae60;}
+        .project-card .btn {     background: #27ae60;}
         .project-card h3 {
             color: #34495e;
             margin-top: 0;
@@ -131,6 +132,11 @@
         .project-table tbody tr:nth-child(even) {
             background: #f9f9f9;
         }
+        .readme-content {
+            padding: 2rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -143,20 +149,27 @@
     </header>
 
     <main class="container">
-        <section id="about" class="section about-section">
-            <div class="about-text">
+        <section id="about" class="section">
             <h2 class="section-title">Sobre</h2>
-            <p>Olá! Sou Wesley Gomes, um profissional com mais de 14 anos de experiência em TI em transição de carreira, migrando do desenvolvimento para a coordenação ágil de times de alta performance nos últimos 4 anos. Tenho um background de arquitetura, com conhecimentos em front-end, API Rest em Nuvem, capaz de guiar times para soluções robustas e intuitivas baseado na jornada do usuário utilizando ferramentas de interação dinâmica e metodologias, ferramentas e frameworks para facilitar a vida do product owner para o alinhamento com desenvolvedores, QA´s, SRE´s e áreas de governança.</p>
-            <p>Minha paixão é otimizar processos e guiar equipes na entrega de produtos de alta qualidade, mantendo o foco em tecnologias emergentes e em metodologias que impulsionam a inovação.</p>
+            <div class="about-section">
+                <div class="about-text">
+                <p>Olá! Sou Wesley Gomes, um profissional com mais de 14 anos de experiência em TI em transição de carreira, migrando do desenvolvimento para a coordenação ágil de times de alta performance nos últimos 4 anos. Tenho um background de arquitetura, com conhecimentos em front-end, API Rest em Nuvem, capaz de guiar times para soluções robustas e intuitivas baseado na jornada do usuário utilizando ferramentas de interação dinâmica e metodologias, ferramentas e frameworks para facilitar a vida do product owner para o alinhamento com desenvolvedores, QA´s, SRE´s e áreas de governança.</p>
+                <p>Minha paixão é otimizar processos e guiar equipes na entrega de produtos de alta qualidade, mantendo o foco em tecnologias emergentes e em metodologias que impulsionam a inovação.</p>
+                </div>
+                <div class="about-photo">
+                <img src="wesley.jpg" alt="Foto de Wesley Gomes">
+                </div>
             </div>
-            <div class="about-photo">
-            <img src="wesley.jpg" alt="Foto de Wesley Gomes">
+            <div class="about-readme" style="margin-top: 2rem;">
+                <h3>Plano de evolução de pratica (readMe)</h3>
+                <p>Para ter uma visão da futura arquitetura e dos planos de evolução deste portfólio, confira o documento técnico. Ele detalha a transição para um ecossistema com frontend em Angular modular e backend com arquitetura em nuvem de forma que possa praticar o desenvolvimento de aplicações web.</p>
+                <div id="readme-container" class="readme-content">Carregando README...</div>
             </div>
         </section>
         <section id="softskills" class="section">
             <h2 class="section-title">Soft Skills</h2>
             <ul class="skills-list">
-                            <li>Inglês (Avançado, pois não sou nativo)</li>
+                <li>Inglês (Avançado, pois não sou nativo)</li>
             <li>Comunicação Clara</li>
             <li>Resolução de Problemas</li>
             <li>Liderança</li>
@@ -190,16 +203,15 @@
         <section id="projects" class="section">
             <h2 class="section-title">Pilares do trabalho, Capacidade de execução & Resultados alcançados entre Jan/2023 a Ago/2025</h2>
             <div class="result-pillars" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                            <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">ITIL</div>
-                                                        <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Gestão de Budget de projeto.</div>
-                                                        <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">CAPEX & OPEX.</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">ITIL</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Gestão de Budget de projeto.</div>
+                <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">CAPEX & OPEX.</div>
             <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Documentação dinâmica</div>
             <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Automação de testes</div>
             <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Monitoramento</div>
             <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Ambiente seguro</div>
             <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Desenvolvimento de autonomia</div>
             <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Desenho da arquitetura das aplicações</div>
-
             </div>
             <div class="project-card">
             <h3>Projeto 1: Vulnerabilidades em parque de 110 aplicações Angular e Java.</h3>
@@ -221,8 +233,8 @@
                     <td style="padding: 0.5rem; border: 1px solid #ccc;">Coordenação direta no modelo ágil sem scrum master com reports executivos.</td>
                 </tr>
                 </tbody>
-            </table>            <a href="https://flexpag.com/" class="btn" target="_blank">Flexpag M&A Serasa Experian</a>
-                        <a href="https://www.linkedin.com/in/matheus-benicio-b55a4a8/" class="btn" target="_blank">Referência: Matheus Benicio</a>
+            </table>         <a href="https://flexpag.com/" class="btn" target="_blank">Flexpag M&A Serasa Experian</a>
+                         <a href="https://www.linkedin.com/in/matheus-benicio-b55a4a8/" class="btn" target="_blank">Referência: Matheus Benicio</a>
             </div>
             <div class="project-card">
             <h3>Projeto 2: Implementação de Gestão de dados em M&A.</h3>
@@ -246,7 +258,7 @@
                 </tbody>
             </table>
             <a href="https://flexpag.com/" class="btn" target="_blank">Flexpag M&A Serasa Experian</a>
-                        <a href="https://www.linkedin.com/in/viniciuskr" class="btn" target="_blank">Referência: Vini K</a>
+                         <a href="https://www.linkedin.com/in/viniciuskr" class="btn" target="_blank">Referência: Vini K</a>
             </div>
             <div class="project-card">
             <h3>Projeto 3: Migração de Pentaho para Databricks e migração de Tableau para PowerBI.</h3>
@@ -269,9 +281,9 @@
                     <td style="padding: 0.5rem; border: 1px solid #ccc;">Coordenação direta no modelo ágil sem scrum master com reports executivos.<br>B2C Flexpag M&A Serasa Experian</td>
                 </tr>
                 </tbody>
-            </table>            <a href="https://flexpag.com/" class="btn" target="_blank">Flexpag M&A Serasa Experian</a>
-                        <a href="https://www.linkedin.com/in/viniciuskr" class="btn" target="_blank">Referência: Vini K</a>
-                        <br>
+            </table>         <a href="https://flexpag.com/" class="btn" target="_blank">Flexpag M&A Serasa Experian</a>
+                         <a href="https://www.linkedin.com/in/viniciuskr" class="btn" target="_blank">Referência: Vini K</a>
+                         <br>
             </div>
             <div class="project-card">
             <h3>Projeto 4: Transformação Digital.</h3>
@@ -294,8 +306,8 @@
                 </tr>
                 </tbody>
             </table>        <a href="https://serasa.com/" class="btn" target="_blank">B2B Serasa Experian</a>
-                        <a href="https://www.linkedin.com/in/samantha-miziara" class="btn" target="_blank">Referência: Samantha Miziara</a>
-                        <br>           </div>
+                         <a href="https://www.linkedin.com/in/samantha-miziara" class="btn" target="_blank">Referência: Samantha Miziara</a>
+                         <br>         </div>
             <div class="project-card">
             <h3>Projeto 5: IA para LegalTech.</h3>
             <p><strong>Escopo:</strong> Facilitar a compilação de informações para análises da área jurídica da Serasa com tecnologia Low Code.</p>
@@ -316,10 +328,10 @@
                     <td style="padding: 0.5rem; border: 1px solid #ccc;">Redução no SLA de atendimento da equipe jurídica para análises no nível 1 e 2 em cerca de 12%.<br>B2B Serasa Experian</td>
                 </tr>
                 </tbody>
-            </table>       <a href="https://serasa.com/" class="btn" target="_blank">B2B Serasa Experian | LegalTech</a>
-                        <a href="https://www.linkedin.com/in/simone-conejo-garcia-morello-0a0984137/" class="btn" target="_blank">Referência: Simone Garcia</a>
-                        <br>
-           </div>
+            </table>     <a href="https://serasa.com/" class="btn" target="_blank">B2B Serasa Experian | LegalTech</a>
+                         <a href="https://www.linkedin.com/in/simone-conejo-garcia-morello-0a0984137/" class="btn" target="_blank">Referência: Simone Garcia</a>
+                         <br>
+            </div>
         </section>
         <section id="projects-2020-2023" class="section">
             <h2 class="section-title">Projetos 2021 a 2023</h2>
@@ -344,7 +356,7 @@
                     </tr>
                 </tbody>
             </table>  <a href="https://serasa.com/" class="btn" target="_blank">B2B Serasa Experian</a>
-                        <a href="https://www.linkedin.com/in/JeanTakushi" class="btn" target="_blank">Referência: Jean Takushi</a>
+                         <a href="https://www.linkedin.com/in/JeanTakushi" class="btn" target="_blank">Referência: Jean Takushi</a>
             </div>
             <div class="project-card">
             <h3>Projeto 7: Journey</h3>
@@ -367,7 +379,7 @@
                 </tr>
                 </tbody>
             </table> <a href="https://serasa.com/" class="btn" target="_blank">B2B Serasa Experian</a>
-                        <a href="https://www.linkedin.com/in/jean-takushi-9371781/" class="btn" target="_blank">Referência: Jean Takushi</a>
+                         <a href="https://www.linkedin.com/in/jean-takushi-9371781/" class="btn" target="_blank">Referência: Jean Takushi</a>
             </div>
             <!-- Modelo de Cartão de Projeto para Preencher -->
             <div class="project-card">
@@ -391,7 +403,7 @@
                         </tr>
                     </tbody>
                 </table> <a href="https://serasa.com/" class="btn" target="_blank">B2B Serasa Experian</a>
-                        <a href="https://www.linkedin.com/in/jean-takushi-9371781/" class="btn" target="_blank">Referência: Jean Takushi</a>
+                         <a href="https://www.linkedin.com/in/jean-takushi-9371781/" class="btn" target="_blank">Referência: Jean Takushi</a>
             </div>
         </section>
         <section id="contact" class="section">
@@ -410,7 +422,7 @@
                 <div>
                     <div class="phone-display" style="font-size: 1.2rem;"></div>
                     <i class="fas fa-phone"></i> <span>(16) 99721-2966</span>
-                </div>                <div><i class="fas fa-map-marker-alt"></i><span>São Carlos, SP</span></div>
+                </div>          <div><i class="fas fa-map-marker-alt"></i><span>São Carlos, SP</span></div>
 
             </div>
         </section>
@@ -420,6 +432,39 @@
        style="position: fixed; bottom: 24px; right: 24px; z-index: 1000; background: #25d366; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
         <i class="fab fa-whatsapp" style="font-size: 2rem;"></i>
     </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Use a URL do seu repositório GitHub para buscar o arquivo README.md
+        const githubReadmeUrl = 'https://raw.githubusercontent.com/wesleyzilva/portfolio/main/README.md';
+
+        // Busca o conteúdo do README do GitHub
+        fetch(githubReadmeUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Não foi possível carregar o README. Verifique a URL do repositório.');
+                }
+                return response.text();
+            })
+            .then(markdownText => {
+                // Converte o Markdown para HTML
+                const htmlContent = marked.parse(markdownText);
+                
+                // Insere o HTML no container
+                const readmeContainer = document.getElementById('readme-container');
+                readmeContainer.innerHTML = htmlContent;
+                
+                // Adiciona um estilo básico ao conteúdo para melhor visualização
+                readmeContainer.style.padding = '20px';
+                readmeContainer.style.background = '#fff';
+                readmeContainer.style.border = '1px solid #e0e0e0';
+                readmeContainer.style.borderRadius = '8px';
+            })
+            .catch(error => {
+                console.error('Erro ao carregar o README:', error);
+                document.getElementById('readme-container').innerHTML = `<p style="color: red;">Erro ao carregar o plano de evolução. Por favor, tente novamente mais tarde.</p>`;
+            });
+    </script>
 </body>
 </html>
 <style> .reference-btn {  background: #2980b9;}</style>
