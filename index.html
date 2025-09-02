@@ -8,7 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
+            padding-top: 65px; /* Espaço para o header fixo */
             padding-bottom: 80px; /* Espaço para o rodapé fixo */
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: #fff;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            padding: 0.5rem 0;
+            transition: padding 0.3s ease;
+        }
+        .header .header-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .name {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+        .header .role {
+            font-size: 0.9rem;
+            margin: 0;
+            font-weight: 400; /* Aumentado para melhor legibilidade */
         }
         /* Responsivo para layout principal */
         .container {
@@ -51,6 +81,16 @@
             background: #084a8c;
         }
         @media (max-width: 768px) {
+            body {
+                padding-top: 110px; /* Ajuste para header maior */
+            }
+            .header {
+                padding: 0.75rem 0;
+            }
+            .header .header-content {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
             .about-section {
                 flex-direction: column;
                 gap: 1rem;
@@ -68,10 +108,10 @@
             }
         }
         @media (max-width: 480px) {
-            .header-content h1 {
+            .header .name, .header-content h1 {
                 font-size: 1.5rem;
             }
-            .header-content p {
+            .header .role, .header-content p {
                 font-size: 1rem;
             }
             .about-photo img {
@@ -161,10 +201,9 @@
             margin: 0 auto;
             padding: 0 1rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* Ajustado para alinhar o contador */
             align-items: center;
             flex-wrap: wrap;
-            gap: 2rem;
         }
         .site-footer a {
             color: #fff;
@@ -183,6 +222,19 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+        .footer-main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .visitor-counter {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -373,12 +425,14 @@
             </div>
             <h4>Hard & Soft Skills do projeto</h4>
             <div class="tech-pills-container">
-                <span class="btn btn_skill">Scrum</span>
+                <span class="btn btn_skill">Yellow Belt Certification</span>
+                <span class="btn btn_skill">Scrum & Kanban</span>
                 <span class="btn btn_skill">JIRA</span>
+                <span class="btn btn_skill">Miro, Figma</span>
                 <span class="btn btn_skill">Service Now</span>
                 <span class="btn btn_skill">Tableau</span>
                 <span class="btn btn_skill">SAFE</span>
-                <span class="btn btn_skill">ITIL</span>
+                <span class="btn btn_skill">ITIL Agile</span>
                 <span class="btn btn_skill">Liderança</span>
                 <span class="btn btn_skill">Gerenciamento de Pessoas</span>
                 <span class="btn btn_skill">Gestão de Times Remotos</span>
@@ -493,7 +547,7 @@
                 <span class="btn btn_skill">Apigee</span>
                 <span class="btn btn_skill">Salesforce</span>
                 <span class="btn btn_skill">.NET</span>
-                <span class="btn btn_skill">Batch</span>
+                <span class="btn btn_skill">Airflow</span>
                 <span class="btn btn_skill">Control-M</span>
                 <span class="btn btn_skill">Adobe Analytics</span>
                 <span class="btn btn_skill">UI/UX Design</span>
@@ -546,21 +600,27 @@
     </main>
     <footer id="contact" class="site-footer">
         <div class="footer-container">
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/wesleyzilva" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/wesley.zilva" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <div class="visitor-counter">
+                <i class="fas fa-eye"></i>
+                <span>Visitas: <span id="visit-count">...</span></span>
             </div>
-            <div class="contact-info">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:wesley.zilva@gmail.com">wesley.zilva@gmail.com</a>
-            </div>
-            <div class="contact-info">
-                <i class="fas fa-phone"></i>
-                <span>(16) 99721-2966</span>
-            </div>
-            <div class="contact-info">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>São Carlos, SP</span>
+            <div class="footer-main-content">
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/wesleyzilva" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/wesley.zilva" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:wesley.zilva@gmail.com">wesley.zilva@gmail.com</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>(16) 99721-2966</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>São Carlos, SP</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -608,6 +668,23 @@
                 // Mensagem de erro para o usuário
                 readmeContainer.innerHTML = `<p style="color: red;">Erro ao carregar o plano de evolução. Por favor, tente novamente mais tarde.</p>`;
             });
+
+        // Contador de visitas simples usando localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const countElement = document.getElementById('visit-count');
+            const storageKey = 'portfolioVisitCount';
+
+            let visitCount = localStorage.getItem(storageKey);
+
+            if (visitCount === null) {
+                visitCount = 1;
+            } else {
+                visitCount = parseInt(visitCount, 10) + 1;
+            }
+
+            localStorage.setItem(storageKey, visitCount);
+            countElement.textContent = visitCount;
+        });
     </script>
 </body>
 </html>

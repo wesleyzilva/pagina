@@ -1,53 +1,82 @@
-# Plano de Evolução
+# Plano de Evolução do Portfólio
 
-Este documento descreve a visão e a arquitetura planejada para a evolução do portfólio, transformando-o de uma página web estática para um ecossistema de aplicações completo e moderno, focado em práticas de desenvolvimento robustas e escaláveis.
+Este documento descreve a visão, a arquitetura e o plano de execução para evoluir este portfólio de uma página web estática para um ecossistema de aplicações moderno, demonstrando práticas de desenvolvimento full-stack.
 
 ## 🚀 Visão do Projeto
 
-O objetivo é refatorar o portfólio atual para uma arquitetura full-stack, aplicando conceitos de desenvolvimento modular e de microserviços. Esta transição servirá como um projeto prático para demonstrar proficiência em tecnologias e metodologias de ponta, incluindo a criação de um contador de acessos flutuante para mostrar resultados em tempo real no github pessoal.
+O objetivo é refatorar o portfólio atual para uma arquitetura completa, aplicando conceitos de desenvolvimento modular e comunicação via APIs. Esta transição servirá como um projeto prático para demonstrar proficiência em tecnologias e metodologias de ponta.
 
-Repositorio: https://github.com/wesleyzilva/pagina
-
-Produto: https://wesleyzilva.github.io/pagina/
-
+- **Repositório:** https://github.com/wesleyzilva/pagina
+- **Produto Final:** https://wesleyzilva.github.io/pagina/
 
 ---
 
-## 🛠️ Arquitetura Proposta (Evolução)
+## 🛠️ Arquitetura Proposta
 
-A nova arquitetura será composta por três camadas principais que se comunicam de forma fluida para garantir a modularidade e a manutenibilidade do código.
+A nova arquitetura será composta por camadas distintas que se comunicam para garantir modularidade, escalabilidade e manutenibilidade.
 
 1.  **Frontend (Angular):**
-    * **Tecnologia:** A interface do usuário será desenvolvida com **Angular**, aproveitando sua estrutura de componentes e módulos para criar uma aplicação escalável e responsiva. O objetivo é transformar a experiência do usuário em uma Single-Page Application (SPA).
+    *   A interface do usuário será uma **Single-Page Application (SPA)** desenvolvida com Angular, aproveitando sua estrutura de componentes para criar uma experiência de usuário rica e interativa.
 
 2.  **API Facade (Camada Intermediária):**
-    * **Tecnologia:** Uma API de fachada será implementada para servir como a única porta de entrada para o frontend. Esta camada simplificará as chamadas ao backend, orquestrando as requisições e garantindo a segurança.
+    *   Uma API de fachada servirá como a única porta de entrada para o frontend. Ela irá orquestrar requisições, simplificar a comunicação com o backend e centralizar a segurança.
 
 3.  **API Business (Backend):**
-    * **Tecnologia:** Esta será a API principal, responsável por toda a lógica de negócio, como a gestão dos dados dos projetos e habilidades. Ela será a fonte da verdade para as informações do portfólio.
+    *   Esta API será responsável por toda a lógica de negócio, como a gestão dos dados de projetos, habilidades e o processamento do contador de acessos.
 
 4.  **Banco de Dados (PostgreSQL):**
-    * **Tecnologia:** O banco de dados **PostgreSQL** será o repositório de dados persistente, armazenando informações como projetos, experiências, habilidades e dados para o contador de acessos.
+    *   O **PostgreSQL** será o repositório de dados, armazenando de forma persistente as informações do portfólio.
 
 ---
 
-## 📈 Nova Funcionalidade: Contador de Acessos Flutuante
+## 📈 Funcionalidade Chave: Contador de Acessos
 
-Uma nova funcionalidade será implementada para demonstrar a interação entre o frontend e o backend: um **contador de acessos flutuante**.
+Para demonstrar a interação ponta a ponta, a primeira funcionalidade a ser implementada será um **contador de acessos em tempo real**.
 
-* **Como funcionará:** Toda vez que a página do portfólio for acessada, o frontend fará uma chamada à API de negócios. Esta API, por sua vez, incrementará o valor de um contador no banco de dados e retornará o número total de acessos. O frontend exibirá este valor em um componente flutuante na tela, dando uma visão em tempo real da popularidade do site.
+*   **Como funcionará:** Ao carregar a página, o frontend fará uma chamada à API, que incrementará o valor do contador no banco de dados e retornará o total de acessos. O frontend exibirá este valor em um componente na tela.
 
 ---
 
-## 🗺️ Próximos Passos
+## 🗺️ Plano de Sprints (Execução em 5 dias)
 
-1.  **Configuração do Ambiente:** Criar a estrutura de pastas do projeto (por exemplo, `frontend/`, `backend/`).
-2.  **Início do Frontend:** Inicializar um novo projeto Angular dentro da pasta `frontend/`.
-3.  **Desenvolvimento do Backend:** Criar a API de negócios e a API de fachada.
-4.  **Configuração do Banco de Dados:** Criar a base de dados PostgreSQL e as tabelas necessárias para armazenar os dados do portfólio e o contador de acessos.
-5.  **Implementação da Funcionalidade:** Construir o endpoint para o contador de acessos na API e o componente no Angular para exibi-lo.
+O desenvolvimento inicial será dividido em 5 dias de trabalho focado.
 
-Este README servirá como um guia para a jornada de desenvolvimento, garantindo que o projeto mantenha o foco e a coesão arquitetônica.
-```eof
+### **Sprint 1 (Dia 1): Planejamento e Configuração do Ambiente**
+- **Objetivo:** Estruturar o projeto e preparar o ambiente de desenvolvimento.
+- **Tarefas:**
+    - [x] Detalhar o plano de sprints.
+    - [ ] Criar a estrutura de pastas do projeto (`frontend/`, `backend/`).
+    - [ ] Configurar os repositórios no Git.
+    - [ ] Inicializar um novo projeto Angular.
+    - [ ] Definir a estrutura base do projeto backend (API Facade e Business).
 
-Este documento pode ser o ponto de partida ideal para o seu projeto, servindo como uma visão clara do que precisa ser construído e por que, além de ser um excelente item para o seu portfólio. Se precisar de ajuda com os próximos passos, é só me dizer!
+### **Sprint 2 (Dia 2): Backend - API e Banco de Dados**
+- **Objetivo:** Construir a base da API e a persistência de dados.
+- **Tarefas:**
+    - [ ] Modelar e criar as tabelas no PostgreSQL (ex: `access_counter`).
+    - [ ] Configurar a conexão do backend com o banco de dados.
+    - [ ] Desenvolver o endpoint para o contador de acessos (`POST /visits`).
+    - [ ] Implementar a lógica para incrementar e retornar o número de visitas.
+
+### **Sprint 3 (Dia 3): Frontend - Integração do Contador**
+- **Objetivo:** Conectar o frontend com a API para exibir o contador.
+- **Tarefas:**
+    - [ ] Criar um serviço em Angular (`CounterService`) para se comunicar com a API.
+    - [ ] Implementar a chamada à API no carregamento da página.
+    - [ ] Criar um componente visual para exibir o número de acessos.
+    - [ ] Estilizar o componente do contador.
+
+### **Sprint 4 (Dia 4): Refatoração e Integração Contínua**
+- **Objetivo:** Melhorar a estrutura do código e automatizar o deploy.
+- **Tarefas:**
+    - [ ] Refatorar o HTML estático para componentes Angular reutilizáveis (ex: `ProjectCardComponent`).
+    - [ ] Garantir que a integração Frontend <-> Backend está robusta (tratamento de erros, CORS).
+    - [ ] Configurar um pipeline de CI/CD básico (GitHub Actions) para o build do frontend.
+
+### **Sprint 5 (Dia 5): Deploy e Finalização**
+- **Objetivo:** Publicar a primeira versão funcional e documentar o processo.
+- **Tarefas:**
+    - [ ] Realizar o deploy da nova versão do frontend no GitHub Pages.
+    - [ ] (Opcional) Realizar o deploy do backend em uma plataforma (ex: Heroku, Vercel).
+    - [ ] Testar a funcionalidade em produção.
+    - [ ] Atualizar o `README.md` com o status final da sprint e lições aprendidas.
