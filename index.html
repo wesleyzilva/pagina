@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
+            font-family: Arial, sans-serif;
             padding-top: 65px; /* Espaço para o header fixo */
             padding-bottom: 80px; /* Espaço para o rodapé fixo */
+            background-color: #f4f7f9;
+            color: #333;
         }
         .header {
             position: fixed;
@@ -38,7 +41,7 @@
         .header .role {
             font-size: 0.9rem;
             margin: 0;
-            font-weight: 400; /* Aumentado para melhor legibilidade */
+            font-weight: 400;
         }
         /* Responsivo para layout principal */
         .container {
@@ -50,7 +53,11 @@
             display: flex;
             align-items: flex-start;
             gap: 2rem;
-            flex-wrap: wrap; /* Adicionado para responsividade */
+            flex-wrap: wrap;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .about-text {
             flex: 2;
@@ -63,10 +70,10 @@
         }
         .about-photo img {
             width: 180px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 50%;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         .btn {
             display: inline-block;
@@ -76,9 +83,17 @@
             border-radius: 6px;
             text-decoration: none;
             transition: background 0.2s;
+            text-align: center;
         }
         .btn:hover {
             background: #084a8c;
+        }
+        .project-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
         }
         @media (max-width: 768px) {
             body {
@@ -94,14 +109,11 @@
             .about-section {
                 flex-direction: column;
                 gap: 1rem;
+                padding: 1rem;
             }
             .about-photo img {
                 width: 140px;
                 height: 140px;
-            }
-            .skills-list {
-                flex-direction: column;
-                gap: 0.5rem;
             }
             .container {
                 padding: 0.5rem;
@@ -126,7 +138,7 @@
                 font-size: 1rem;
             }
         }
-
+        
         .section-title {
             font-size: 2rem;
             color: #2c3e50;
@@ -137,6 +149,9 @@
         .tech-pills-container {
             margin-top: 0.75rem;
             margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
         .project-card .btn.btn_skill {
             background: #a82462; /* Cor personalizada para skills */
@@ -147,11 +162,14 @@
         }
         .project-links {
             margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
         .reference-btn {
             background: #2980b9;
         }
-        .project-card .btn {     background: #3498db;}
+        .project-card .btn { background: #3498db;}
         .project-card h3 {
             color: #34495e;
             margin-top: 0;
@@ -252,19 +270,14 @@
             <h2 class="section-title">Sobre</h2>
             <div class="about-section">
                 <div class="about-text">
-                <p>Olá! Sou Wesley Gomes, um profissional com mais de 14 anos de experiência em TI. Nos últimos 4 anos, tenho me dedicado à coordenação ágil de times de alta performance, uma transição de carreira que abracei após uma longa jornada no desenvolvimento.</p>
-                <p>Com um sólido background em arquitetura e conhecimentos em front-end e API Rest em Nuvem, sou capaz de guiar equipes na criação de soluções robustas e intuitivas, sempre com foco na jornada do usuário.</p>
-                <p>Utilizo ferramentas de interação dinâmica, metodologias e frameworks para facilitar a vida do Product Owner e garantir o alinhamento eficaz entre desenvolvedores, QAs, SREs e áreas de governança.</p>
-                <p>Minha paixão é otimizar processos e guiar equipes na entrega de produtos de alta qualidade, mantendo o foco em tecnologias emergentes e em metodologias que impulsionam a inovação.</p>
+                    <p>Com 14 anos de experiência em TI, minha carreira é marcada pela capacidade de gerar resultados e impulsionar a transformação. Fiz a transição de um desenvolvedor com um background técnico sólido em arquitetura, front-end e APIs REST em Nuvem para um líder focado na coordenação ágil de times de alta performance. Minha expertise me permite guiar equipes com precisão, criando soluções que não só funcionam, mas que também melhoram a vida do usuário.</p>
+                    <p>Meu trabalho se concentra em otimizar e alinhar. Uso metodologias e frameworks ágeis como ferramentas para desfragmentar o processo de desenvolvimento, garantindo que desenvolvedores, QAs, SREs e a governança trabalhem em sintonia. A minha meta é simplificar a complexidade, permitindo que as equipes se concentrem no que realmente importa: a entrega de valor contínuo e de alta qualidade.</p>
+                    <p>A cultura da equipe é um pilar para o sucesso. Por isso, me dediquei à criação de guildas, chapters e outras estruturas ágeis para aprimorar a integração e a transferência de conhecimento. Essa iniciativa foi crucial para aprimorar a sinergia entre as equipes e garantir que as pessoas certas, com habilidades equivalentes, estivessem no lugar certo, gerando um ambiente de alta performance.</p>
+                    <p>Nesta página, você encontrará a prova do meu trabalho. Selecionei 10 projetos que demonstram minha jornada completa: da concepção à entrega e sustentação. Em cada um deles, tive a oportunidade de liderar como coordenador e Agile Master, mas também de atuar no desenvolvimento, na criação de observabilidade e na documentação, mostrando um compromisso com o resultado em todas as suas fases.</p>
                 </div>
                 <div class="about-photo">
                 <img src="wesley.jpg" alt="Foto de Wesley Gomes">
                 </div>
-            </div>
-            <div class="about-readme" style="margin-top: 2rem;">
-                <h3>Plano de evolução de prática (readMe)</h3>
-                <p>Para ter uma visão da futura arquitetura de referência atual e dos planos de evolução deste portfólio, confira o documento técnico. Ele detalha a transição para um ecossistema com frontend em Angular modular e backend com arquitetura em nuvem de forma que possa praticar o desenvolvimento de aplicações web.</p>
-                <p>O objetivo deste projeto é mostrar o conhecimento técnico adquirido para utilizar como transferência de conhecimento para possíveis desenvolvedores juniores e QAs com propósito de produto direto no github separado por branchs evolutivas.</p>                <div id="readme-container" class="readme-content">Carregando README...</div>
             </div>
         </section>
         <section id="documents" class="section">
@@ -274,8 +287,8 @@
                 <a href="Wes_CV_PT_Coord_IT_Desenv_Dados.pdf" class="btn" download>Currículo (PDF)</a>
             </div>
         </section>
-        <section id="projects" class="section">
-            <h2 class="section-title">Pilares do trabalho, Capacidade de execução & Resultados alcançados entre Jan/2023 a Ago/2025</h2>
+        <section id="projects-2020-2025" class="section">
+            <h2 class="section-title">Projetos 2020-2025</h2>
             <div class="result-pillars" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
                 <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">ITIL</div>
                 <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Gestão de Budget de Projeto</div>
@@ -473,9 +486,6 @@
                 <span class="btn btn_skill">Pensamento Analítico</span>
             </div>
             </div>
-        </section>
-        <section id="projects-2020-2023" class="section">
-            <h2 class="section-title">Projetos 2021 a 2023</h2>
             <div class="project-card">
             <h3>Projeto 6: Customer Care</h3>
             <p><strong>Escopo:</strong> Focando em melhoria contínua dos processos de suporte e satisfação do usuário para área de Atendimento em Call Center e área de vendas externas e suporte á vendas.</p>
@@ -503,17 +513,17 @@
                 </div>
                 <h4>Hard & Soft Skills do projeto</h4>
                 <div class="tech-pills-container">
-                        <span class="btn btn_skill">Java</span>
-                        <span class="btn btn_skill">Apigee</span>
-                        <span class="btn btn_skill">Salesforce</span>
-                        <span class="btn btn_skill">.NET</span>
-                        <span class="btn btn_skill">Batch</span>
-                        <span class="btn btn_skill">Control-M</span>
-                        <span class="btn btn_skill">Dynatrace</span>
-                        <span class="btn btn_skill">BitBucket</span>
-                        <span class="btn btn_skill">ITIL</span>
-                        <span class="btn btn_skill">Comunicação Clara</span>
-                        <span class="btn btn_skill">Resolução de Problemas</span>
+                    <span class="btn btn_skill">Java</span>
+                    <span class="btn btn_skill">Apigee</span>
+                    <span class="btn btn_skill">Salesforce</span>
+                    <span class="btn btn_skill">.NET</span>
+                    <span class="btn btn_skill">Batch</span>
+                    <span class="btn btn_skill">Control-M</span>
+                    <span class="btn btn_skill">Dynatrace</span>
+                    <span class="btn btn_skill">BitBucket</span>
+                    <span class="btn btn_skill">ITIL</span>
+                    <span class="btn btn_skill">Comunicação Clara</span>
+                    <span class="btn btn_skill">Resolução de Problemas</span>
                 </div>
             </div>
             <div class="project-card">
@@ -554,9 +564,8 @@
                 <span class="btn btn_skill">Pensamento Analítico</span>
             </div>
             </div>
-            <!-- Modelo de Cartão de Projeto para Preencher -->
             <div class="project-card">
-                <h3>Migração de aplicações legadas .net para arquitetura de referência angular/java</h3>
+                <h3>Projeto 8: Migração de aplicações legadas .net para arquitetura de referência angular/java</h3>
                 <p><strong>Escopo:</strong>Temos um parque de aplicações com cerca de 50 aplicações .net desde o 1.1 até o 2.5 e é necessário evoluir para um frame mais atualizado e/ou migração para angular/java</p>
                 <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
                     <thead>
@@ -579,23 +588,173 @@
                 <div class="project-links">
                     <a href="https://serasa.com/" class="btn" target="_blank">B2B Serasa Experian</a>
                     <a href="https://www.linkedin.com/in/jean-takushi-9371781/" class="btn" target="_blank">Referência: Jean Takushi</a>
-
                 </div>
                 <h4>Hard & Soft Skills do projeto</h4>
                 <div class="tech-pills-container">
-                        <span class="btn btn_skill">Java</span>
-                        <span class="btn btn_skill">Apigee</span>
-                        <span class="btn btn_skill">Salesforce</span>
-                        <span class="btn btn_skill">.NET</span>
-                        <span class="btn btn_skill">Batch</span>
-                        <span class="btn btn_skill">Control-M</span>
-                        <span class="btn btn_skill">Dynatrace</span>
-                        <span class="btn btn_skill">BitBucket</span>
-                        <span class="btn btn_skill">Liderança</span>
-                        <span class="btn btn_skill">Resolução de Problemas</span>
-                        <span class="btn btn_skill">Git & GitHub</span>
+                    <span class="btn btn_skill">Java</span>
+                    <span class="btn btn_skill">Apigee</span>
+                    <span class="btn btn_skill">Salesforce</span>
+                    <span class="btn btn_skill">.NET</span>
+                    <span class="btn btn_skill">Batch</span>
+                    <span class="btn btn_skill">Control-M</span>
+                    <span class="btn btn_skill">Dynatrace</span>
+                    <span class="btn btn_skill">BitBucket</span>
+                    <span class="btn btn_skill">Liderança</span>
+                    <span class="btn btn_skill">Resolução de Problemas</span>
+                    <span class="btn btn_skill">Git & GitHub</span>
                 </div>
             </div>
+        </section>
+        <section id="projects-before-2020" class="section">
+            <h2 class="section-title">Projetos Antes de 2020</h2>
+            <div class="project-card">
+                <h3>Projeto 9: Programa Empower - Six Sigma Yellow Belt IT</h3>
+                <p><strong>Escopo:</strong> O projeto Empower nasceu como uma iniciativa de inclusão social e diversidade da Serasa Experian, focada em estruturar e liderar tecnicamente um programa de desenvolvimento. A partir dele, apliquei a metodologia Lean Six Sigma para otimizar processos de desenvolvimento e sustentação de TI no contexto do programa social. O objetivo era criar uma esteira de trabalho eficiente e fluidificar os processos das squads.</p>
+                <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="background: #e6f0fa;">
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Duração</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Equipe</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Conquistas</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Destaques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">1 ano</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">1 coach black belt</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Análise e otimização de processos de incidentes, changes e problems na ferramenta Service Now, resultando em uma redução de incidentes diários vindos de N1.</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Uso de métricas e análise de dados para tomada de decisões estratégicas. Criação de um documento de problemas conhecidos para a equipe de N1, garantindo um fluxo mais fluido de resolução.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="project-links">
+                    <a href="https://www.serasaexperian.com.br/" class="btn" target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/thiago-adescenco/" class="btn" target="_blank">Referência: Thiago Ferreira</a>
+                </div>
+                <h4>Hard & Soft Skills do projeto</h4>
+                <div class="tech-pills-container">
+                    <span class="btn btn_skill">Lean Six Sigma</span>
+                    <span class="btn btn_skill">Análise de Dados</span>
+                    <span class="btn btn_skill">DMAIC</span>
+                    <span class="btn btn_skill">Melhoria Contínua</span>
+                    <span class="btn btn_skill">Mentoria</span>
+                    <span class="btn btn_skill">Liderança Técnica</span>
+                    <span class="btn btn_skill">Planejamento Estratégico</span>
+                    <span class="btn btn_skill">Comunicação Empática</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Projeto 10: Mentoria internacional Serasa Experian</h3>
+                <p><strong>Escopo:</strong> Treinamento e aplicação de técnicas de coaching para desenvolver o potencial da equipe, com ênfase em liderança e autonomia. Fui mentorado por um coach internacional para entender os processos ágeis que a Experian estava desenvolvendo na Europa, e depois atuei como mentor de outros profissionais.</p>
+                <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="background: #e6f0fa;">
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Duração</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Equipe</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Conquistas</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Destaques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">1 ano</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">1 coach internacional (como mentor)</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Fui mentoriado para entender os processos ágeis na Europa e, posteriormente, usei esse conhecimento para atuar como mentor de outros.</td>
+                            <td style="padding-left: 0.5rem; border: 1px solid #ccc;">Após ser mentorado, passei a ser mentor e tive a oportunidade de mentorar 3 pessoas: uma na Índia, uma no Brasil e outra na África do Sul.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="project-links">
+                    <a href="https://www.serasaexperian.com.br/carreiras/blog-carreiras/tipos-de-lideranca/" class="btn" target="_blank">Artigo Serasa Experian - Tipos de Liderança</a>
+                </div>
+                <h4>Hard & Soft Skills do projeto</h4>
+                <div class="tech-pills-container">
+                    <span class="btn btn_skill">Mentoria internacional Serasa Experian</span>
+                    <span class="btn btn_skill">Liderança</span>
+                    <span class="btn btn_skill">Desenvolvimento Humano</span>
+                    <span class="btn btn_skill">Inteligência Emocional</span>
+                    <span class="btn btn_skill">Comunicação Efetiva</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Projeto 11: Firefighters - Sustentação a aplicações legadas CRM e Billing</h3>
+                <p><strong>Escopo:</strong> Sustentação de aplicações legadas de CRM e Billing para uma grande empresa de telecomunicação, em parceria com a Amdocs do Brasil. O foco principal era garantir a estabilidade, corrigir bugs e aprimorar a performance dos sistemas on premise Windows, e em Linux com shell scripts.</p>
+                <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="background: #e6f0fa;">
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Duração</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Equipe</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Conquistas</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Destaques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">3 anos</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Squad de sustentação com 5 Desenvolvedores com suporte 24x7.</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Redução do número de incidentes e automatização da correção cadastral de clientes, gerando uma redução no número de incidentes diários de 300 para 100.</td>
+                            <td style="padding-left: 0.5rem; border: 1px solid #ccc;">Liderança em uma squad internacional com suporte 24x7, com transferência de conhecimento e operação em turno com a Índia.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="project-links">
+                    <a href="https://www.serasa.com/" class="btn" target="_blank">Site da Serasa</a>
+                </div>
+                <h4>Hard & Soft Skills do projeto</h4>
+                <div class="tech-pills-container">
+                    <span class="btn btn_skill">CRM</span>
+                    <span class="btn btn_skill">Billing</span>
+                    <span class="btn btn_skill">Java</span>
+                    <span class="btn btn_skill">C++</span>
+                    <span class="btn btn_skill">ITIL</span>
+                    <span class="btn btn_skill">Resolução de Problemas</span>
+                    <span class="btn btn_skill">Comunicação Efetiva</span>
+                    <span class="btn btn_skill">Gestão de Stakeholders</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Projeto 12: Serasa Experian São Carlos</h3>
+                <p><strong>Escopo:</strong> Trazer o conhecimento técnico que estavam nas consultorias de tecnologia para operação dentro da Serasa, aproximando analistas de negócios de desenvolvimento e disseminando o conhecimento de tecnologia dentro da Serasa Experian.</p>
+                <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="background: #e6f0fa;">
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Duração</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Equipe</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Conquistas</th>
+                            <th style="padding: 0.5rem; border: 1px solid #ccc;">Destaques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">2 anos</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Desenvolvedores terceiros e Analistas de negócio.</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ccc;">Conhecimento técnico das aplicações que estavam com terceiros internalizado na Serasa Experian quando a operação de São Carlos foi montada.</td>
+                            <td style="padding-left: 0.5rem; border: 1px solid #ccc;">Documentação extensiva das aplicações relacionando o técnico e preparando para o mundo da agilidade.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="project-links">
+                    <a href="https://www.serasa.com/" class="btn" target="_blank">Site da Serasa</a>
+                </div>
+                <h4>Hard & Soft Skills do projeto</h4>
+                <div class="tech-pills-container">
+                    <span class="btn btn_skill">CRM</span>
+                    <span class="btn btn_skill">Billing</span>
+                    <span class="btn btn_skill">Java</span>
+                    <span class="btn btn_skill">C++</span>
+                    <span class="btn btn_skill">ITIL</span>
+                    <span class="btn btn_skill">Resolução de Problemas</span>
+                    <span class="btn btn_skill">Comunicação Efetiva</span>
+                    <span class="btn btn_skill">Gestão de Stakeholders</span>
+                </div>
+            </div>
+        </section>
+        <section id="about-readme" class="section">
+            <h2 class="section-title">Plano de Evolução de Prática (README)</h2>
+            <p>Para ter uma visão da futura arquitetura de referência atual e dos planos de evolução deste portfólio, confira o documento técnico. Ele detalha a transição para um ecossistema com frontend em Angular modular e backend com arquitetura em nuvem de forma que possa praticar o desenvolvimento de aplicações web.</p>
+            <p>O objetivo deste projeto é mostrar o conhecimento técnico adquirido para utilizar como transferência de conhecimento para possíveis desenvolvedores juniores e QAs com propósito de produto direto no github separado por branchs evolutivas.</p>
+            <div id="readme-container" class="readme-content">Carregando README...</div>
         </section>
     </main>
     <footer id="contact" class="site-footer">
@@ -624,9 +783,8 @@
             </div>
         </div>
     </footer>
-    <!-- Ícone do WhatsApp flutuante -->
-    <a href="https://wa.me/5516997212966" target="_blank" aria-label="Hello, Wesley"
-       style="position: fixed; bottom: 100px; right: 24px; z-index: 1000; background: #25d366; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+        <a href="https://wa.me/5516997212966" target="_blank" aria-label="Hello, Wesley"
+        style="position: fixed; bottom: 100px; right: 24px; z-index: 1000; background: #25d366; color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
         <i class="fab fa-whatsapp" style="font-size: 2rem;"></i>
     </a>
     
