@@ -95,6 +95,14 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             margin-bottom: 2rem;
         }
+        .project-seal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 100px;
+            height: auto;
+            z-index: 1;
+        }
         @media (max-width: 768px) {
             body {
                 padding-top: 110px; /* Ajuste para header maior */
@@ -254,6 +262,18 @@
             gap: 0.5rem;
             font-size: 0.9rem;
         }
+        .footer-left-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .last-modified {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
         /* CSS para os botões flutuantes */
         .floating-button-container {
             position: fixed;
@@ -309,6 +329,7 @@
                     <p>Meu trabalho se concentra em otimizar e alinhar. Uso metodologias e frameworks ágeis como ferramentas para desfragmentar o processo de desenvolvimento, garantindo que desenvolvedores, QAs, SREs e a governança trabalhem em sintonia. A minha meta é simplificar a complexidade, permitindo que as equipes se concentrem no que realmente importa: a entrega de valor contínuo e de alta qualidade.</p>
                     <p>A cultura da equipe é um pilar para o sucesso. Por isso, me dediquei à criação de guildas, chapters e outras estruturas ágeis para aprimorar a integração e a transferência de conhecimento. Essa iniciativa foi crucial para aprimorar a sinergia entre as equipes e garantir que as pessoas certas, com habilidades equivalentes, estivessem no lugar certo, gerando um ambiente de alta performance.</p>
                     <p>Nesta página, você encontrará a prova do meu trabalho. Selecionei alguns projetos que demonstram minha jornada completa durante este período de aprendizado contínuo nos últimos 10 anos da concepção à entrega e sustentação. Em cada um deles, tive a oportunidade de liderar como Coordenador ou Agile Master e também de atuar no desenvolvimento, na criação de observabilidade e na documentação, mostrando um compromisso com o resultado em todas as suas fases.</p>
+                    <p>Para diferenciar os projetos que merecem destaque, você encontrará um selo que reconhece seus diferenciais em categorias como <strong>Maior Impacto no Negócio</strong> e <strong>Inovação Técnica</strong>, e outros que celebra os resultados e aprendizados de cada desafio com destaque.</p>
                 </div>
                 <div class="about-photo">
                 <img src="wesley.jpg" alt="Foto de Wesley Gomes">
@@ -330,6 +351,7 @@
             <div style="background: #0050a0; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 500;">Desenho da arquitetura das aplicações</div>
             </div>
             <div class="project-card">
+            <img src="entregaAgil.png" alt="Selo de reconhecimento" class="project-seal">
             <h3>Projeto 1: Vulnerabilidades em parque de 110 aplicações Angular e Java</h3>
             <p><strong>Escopo:</strong> Redução de vulnerabilidades em aplicação em tempo record com squad de terceiros sem conhecimento no negócio e prazo e budget estipulado para terminar.</p>
             <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -367,6 +389,7 @@
             </div>
             </div>
             <div class="project-card">
+            <img src="superacaoObstaculos.png" alt="Selo de reconhecimento" class="project-seal">
             <h3>Projeto 2: Implementação de Gestão de dados em M&A</h3>
             <p><strong>Escopo:</strong> Implantação de equipes de Analytics, Engenharia de dados & Processamento de dados separando os papeis e responsabilidades e focando em monitoramento via DataDog com comunicação via Power Automate em Low Code para acompanhamento real time via Teams e baseada na arquitetura de referência.</p>
             <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -404,6 +427,7 @@
             </div>
             </div>
             <div class="project-card">
+            <!--img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal">-->
             <h3>Projeto 3: Migração de Pentaho para Databricks e migração de Tableau para PowerBI</h3>
             <p><strong>Escopo:</strong> Criar uma esteira de trabalho para migração de tecnologia de processamento de dados com o objetivo de facilitar a transferência de conhecimento e reposição de equipe devido à alta rotatividade.</p>
             <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -441,6 +465,7 @@
             </div>
             </div>
             <div class="project-card">
+            <img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal">
             <h3>Projeto 4: Transformação Digital</h3>
             <p><strong>Escopo:</strong> Criar uma transformação digital para equipes scrum do B2B baseado em pilares gamificados com foco em métricas para evolução da agilidade.</p>
             <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -481,6 +506,7 @@
             </div>
             </div>
             <div class="project-card">
+            <img src="inovacaoTecnica.png" alt="Selo de reconhecimento" class="project-seal">
             <h3>Projeto 5: IA para LegalTech.</h3>
             <p><strong>Escopo:</strong> Facilitar a compilação de informações para análises da área jurídica da Serasa com tecnologia Low Code.</p>
             <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -516,6 +542,7 @@
             </div>
             </div>
             <div class="project-card">
+            <img src="reconhecimento.png" alt="Selo de reconhecimento" class="project-seal">
             <h3>Projeto 6: Customer Care</h3>
             <p><strong>Escopo:</strong> Focando em melhoria contínua dos processos de suporte e satisfação do usuário para área de Atendimento em Call Center e área de vendas externas e suporte á vendas.</p>
             <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -556,6 +583,7 @@
                 </div>
             </div>
             <div class="project-card">
+            <!--img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal"-->
             <h3>Projeto 7: Journey</h3>
             <p><strong>Escopo:</strong> Melhorar a jornada do usuário nas plataformas de autoatendimento baseado nas informações do Adobe Analitycs.</p>
             <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -594,6 +622,7 @@
             </div>
             </div>
             <div class="project-card">
+                <!--img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal"-->
                 <h3>Projeto 8: Migração de aplicações legadas .net para arquitetura de referência angular/java</h3>
                 <p><strong>Escopo:</strong>Temos um parque de aplicações com cerca de 50 aplicações .net desde o 1.1 até o 2.5 e é necessário evoluir para um frame mais atualizado e/ou migração para angular/java</p>
                 <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -637,6 +666,7 @@
         <section id="projects-before-2020" class="section">
             <h2 class="section-title">Projetos Antes de 2020</h2>
             <div class="project-card">
+                <!--img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal"-->
                 <h3>Projeto 9: Programa Empower - Six Sigma Yellow Belt IT</h3>
                 <p><strong>Escopo:</strong> O projeto Empower nasceu como uma iniciativa de inclusão social e diversidade da Serasa Experian, focada em estruturar e liderar tecnicamente um programa de desenvolvimento. A partir dele, apliquei a metodologia Lean Six Sigma para otimizar processos de desenvolvimento e sustentação de TI no contexto do programa social. O objetivo era criar uma esteira de trabalho eficiente e fluidificar os processos das squads.</p>
                 <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -674,6 +704,7 @@
                 </div>
             </div>
             <div class="project-card">
+                <!--img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal">-->
                 <h3>Projeto 10: Mentoria internacional Serasa Experian para o mundo Agile</h3>
                 <p><strong>Escopo:</strong> Treinamento e aplicação de técnicas de coaching para desenvolver o potencial da equipe, com ênfase em liderança e autonomia. Fui mentorado por um coach internacional para entender os processos ágeis que a Experian estava desenvolvendo na Europa, e depois atuei como mentor de outros profissionais.</p>
                 <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -707,6 +738,7 @@
                 </div>
             </div>
             <div class="project-card">
+                <!--img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal">-->
                 <h3>Projeto 11: Firefighters - Sustentação a aplicações legadas CRM e Billing</h3>
                 <p><strong>Escopo:</strong> Sustentação de aplicações legadas de CRM e Billing para uma grande empresa de telecomunicação, em parceria com a Amdocs do Brasil. O foco principal era garantir a estabilidade, corrigir bugs e aprimorar a performance dos sistemas on premise Windows, e em Linux com shell scripts.</p>
                 <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -743,6 +775,7 @@
                 </div>
             </div>
             <div class="project-card">
+                <!--img src="maiorImpacto.png" alt="Selo de reconhecimento" class="project-seal">-->
                 <h3>Projeto 12: Serasa Experian São Carlos</h3>
                 <p><strong>Escopo:</strong> Trazer o conhecimento técnico que estavam nas consultorias de tecnologia para operação dentro da Serasa, aproximando analistas de negócios de desenvolvimento e disseminando o conhecimento de tecnologia dentro da Serasa Experian.</p>
                 <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
@@ -788,9 +821,15 @@
     </main>
     <footer id="contact" class="site-footer">
         <div class="footer-container">
-            <div class="visitor-counter">
-                <i class="fas fa-eye"></i>
-                <span>Visitas: <span id="visit-count">...</span></span>
+            <div class="footer-left-column">
+                <div class="visitor-counter">
+                    <i class="fas fa-eye"></i>
+                    <span>Visitas: <span id="visit-count">...</span></span>
+                </div>
+                <div class="last-modified">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Última atualização: <span id="last-modified-date"></span></span>
+                </div>
             </div>
             <div class="footer-main-content">
                 <div class="social-icons">
@@ -879,6 +918,14 @@
 
             localStorage.setItem(storageKey, visitCount);
             countElement.textContent = visitCount;
+
+            // Data da última modificação
+            const lastModifiedDateElement = document.getElementById('last-modified-date');
+            if (lastModifiedDateElement) {
+                const lastModified = new Date(document.lastModified);
+                const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+                lastModifiedDateElement.textContent = lastModified.toLocaleDateString('pt-BR', options);
+            }
         });
     </script>
 </body>
